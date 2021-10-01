@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>search</h1>
+	<form action="{{ url_for('search') }}" method="post">
+		<label for="search">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="text" name="srch" placeholder="Name/Address/Phone" id="srch" required>
+		<input type="submit" value="Search">
+		<table border="1" cellpadding="5" cellspacing="5">
+			{% for row in data %}
+			<tr>
+				{% for d in row %}
+				<td>{{ d }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		<div class="msg">{{ msg }}</div>
+	</form>
+	<a href="{{ url_for('index') }}" >Home</a></br>
+	<a href="{{ url_for('add') }}" >Add Employee</a></br>
+	<a href="{{ url_for('delete') }}">Delete Employee</a></br>
+	<a href="{{ url_for('show') }}" >Show Employee</a></br>
+	<a href="{{ url_for('search') }}">Search Employee</a></br>
+</body>
+</html>
+</body>
+</html>

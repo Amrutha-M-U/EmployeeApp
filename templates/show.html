@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>show</h1>
+	<form action="{{ url_for('search') }}" method="post">
+		<table border="1" cellpadding="5" cellspacing="5">
+			{% for row in data %}
+			<tr>
+				{% for d in row %}
+				<td>{{ d }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		<div class="msg">{{ msgs }}</div>
+	</form>
+	<a href="{{ url_for('index') }}" >Home</a></br>
+	<a href="{{ url_for('add') }}" >Add Employee</a></br>
+	<a href="{{ url_for('delete') }}">Delete Employee</a></br>
+	<a href="{{ url_for('show') }}" >Show Employee</a></br>
+	<a href="{{ url_for('search') }}">Search Employee</a></br>
+</body>
+</html>

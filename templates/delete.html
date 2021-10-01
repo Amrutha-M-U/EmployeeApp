@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>delete</h1>
+    <form action="{{ url_for('delete') }}" method="post">
+        <label for="empid">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="Number" name="empid" placeholder="Employee Number" id="empid" required>
+        <div class="msg">{{ msg }}</div> 
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{{ url_for('index') }}" >Home</a></br>
+    <a href="{{ url_for('add') }}" >Add Employee</a></br>
+    <a href="{{ url_for('delete') }}">Delete Employee</a></br>
+    <a href="{{ url_for('show') }}" >Show Employee</a></br>
+    <a href="{{ url_for('search') }}">Search Employee</a></br>
+</body>
+</html>

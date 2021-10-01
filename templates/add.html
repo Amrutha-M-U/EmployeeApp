@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>add</h1>
+	<form action="{{ url_for('add') }}" method="post">
+		<label for="name">
+			<i class="fas fa-user"></i>
+		</label>
+		<input type="text" name="name" placeholder="Username" id="name" required>
+
+		<label for="designation">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="text" name="designation" placeholder="Designation" id="designation" required>
+
+		<label for="phone">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="tel" name="phone" placeholder="Phone" id="phone" required>
+
+		<label for="address">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="text" name="address" placeholder="Address" id="address" required>
+
+		<label for="email">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="email" name="email" placeholder="Email" id="email" required>
+
+		<label for="hiredate">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="Date" name="hiredate" placeholder="Hiredate" id="hiredate" required>
+
+		<label for="salary">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="Number" name="salary" placeholder="Salary" id="salary" required>
+
+		<label for="managerId">
+			<i class="fas fa-lock"></i>
+		</label>
+		<input type="Number" name="managerId" placeholder="ManagerID" id="managerId" required>
+
+		<div class="msg">{{ msg }}</div>
+
+		<input type="submit" value="Add Employee">
+
+	</form>
+	<a href="{{ url_for('index') }}" >Home</a></br>
+	<a href="{{ url_for('add') }}" >Add Employee</a></br>
+	<a href="{{ url_for('delete') }}">Delete Employee</a></br>
+	<a href="{{ url_for('show') }}" >Show Employee</a></br>
+	<a href="{{ url_for('search') }}">Search Employee</a></br>
+</body>
+</html>
